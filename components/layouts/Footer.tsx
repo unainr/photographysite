@@ -11,7 +11,8 @@ import {
 } from "lucide-react";
 import { FooterBackgroundGradient, TextHoverEffect } from "./hover-footer";
 import Logo from "./Logo";
-
+import Link from "next/link";
+import { BsWhatsapp } from "react-icons/bs";
 function Footer() {
   // Footer link data
   const footerLinks = [
@@ -21,7 +22,6 @@ function Footer() {
         { label: "Home", href: "/" },
         { label: "Services", href: "/services" },
         { label: "Portfolio", href: "/photography" },
-        { label: "About Us", href: "/about" },
       ],
     },
     {
@@ -66,13 +66,13 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0F0F11]/10 dark:bg-[#0F0F11]/30 relative h-fit rounded-3xl overflow-hidden m-8">
+    <><footer className="bg-[#0F0F11]/10 dark:bg-[#0F0F11]/30 relative h-fit rounded-3xl overflow-hidden m-8">
       <div className="max-w-7xl mx-auto p-14 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Brand section */}
           <div className="flex flex-col w-full">
             <div className="flex items-center space-x-2 mb-4">
-              <Logo/>
+              <Logo />
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground">
               Professional photography and event management services across Dubai and UAE. Capturing your precious moments with excellence.
@@ -88,13 +88,13 @@ function Footer() {
               <ul className="space-y-3">
                 {section.links.map((link) => (
                   <li key={link.label} className="relative">
-                    <a
+                    <Link
                       href={link.href}
                       className="text-muted-foreground hover:text-[#d3803c] dark:hover:text-[#e09043] transition-colors"
                     >
                       {link.label}
-                    </a>
-                    
+                    </Link>
+
                   </li>
                 ))}
               </ul>
@@ -157,6 +157,12 @@ function Footer() {
 
       <FooterBackgroundGradient />
     </footer>
+    <Link
+      href="https://wa.me/+971522946276"
+      target="_blank"
+      className="fixed bottom-8 left-8 z-50 bg-green-500 cursor-pointer p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
+        <BsWhatsapp className="text-white text-3xl" />
+      </Link></>
   );
 }
 

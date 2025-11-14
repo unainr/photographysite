@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Portfolio() {
   const categories = ['All', 'Weddings', 'Corporate', 'Events', 'Portraits', 'Real Estate'];
@@ -184,12 +185,14 @@ export default function Portfolio() {
           <p className="text-base sm:text-lg text-muted-foreground mb-6">
             Want to see more of our work? Follow us on social media or get in touch!
           </p>
+          <Link href={'/photography'}>
           <Button 
             size="lg"
             className="bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
-          >
+            >
             View Full Portfolio
           </Button>
+            </Link>
         </div>
       </div>
     </section>

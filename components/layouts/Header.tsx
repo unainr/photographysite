@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, Phone } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Logo from "./Logo";
 import { usePathname } from "next/navigation";
@@ -66,7 +66,7 @@ export default function MainHeader() {
 							isActive("/event") &&
 								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
 						)}>
-						Event 
+						Event
 					</Link>
 					<Link
 						href="/pricing"
@@ -82,7 +82,9 @@ export default function MainHeader() {
 				<div className="hidden md:flex items-center gap-2">
 					<ThemeToggleButton showLabel />
 					<Link href={"/contact"}>
-						<Button className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 ">Book Now</Button>
+						<Button className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 ">
+							<Phone /> Book Now
+						</Button>
 					</Link>
 				</div>
 
@@ -130,7 +132,7 @@ export default function MainHeader() {
 										isActive("/event") &&
 											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
 									)}>
-									Event 
+									Event
 								</Link>
 								<Link
 									href="/pricing"
@@ -143,7 +145,9 @@ export default function MainHeader() {
 								</Link>
 								<ThemeToggleButton showLabel />
 								<Link href={"/contact"}>
-									<Button className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">Book Now</Button>
+									<Button className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 ">
+										<Phone /> Book Now
+									</Button>
 								</Link>
 							</nav>
 						</SheetContent>
