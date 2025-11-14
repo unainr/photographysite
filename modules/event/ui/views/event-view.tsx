@@ -24,7 +24,7 @@ export const EventView = () => {
 			date: "June 15, 2024",
 			location: "Grand Ballroom, Downtown",
 			guests: "250+",
-			image: "/images/image1.jpg",
+			image: "/images/image1.JPG",
 			description:
 				"A beautiful summer wedding with elegant decorations and heartfelt moments.",
 			highlights: [
@@ -41,7 +41,7 @@ export const EventView = () => {
 			date: "April 20, 2024",
 			location: "Fashion District, NYC",
 			guests: "500+",
-			image: "/images/image3.jpg",
+			image: "/images/image3.JPG",
 			description:
 				"Capturing the elegance and energy of a high-fashion runway event.",
 			highlights: [
@@ -58,7 +58,7 @@ export const EventView = () => {
 			date: "May 10, 2024",
 			location: "Convention Center",
 			guests: "1000+",
-			image: "/images/image2.jpg",
+			image: "/images/image2.JPG",
 			description:
 				"Professional coverage of keynote speeches, networking, and panel discussions.",
 			highlights: [
@@ -75,7 +75,7 @@ export const EventView = () => {
 			date: "March 8, 2024",
 			location: "Luxury Hotel Ballroom",
 			guests: "300+",
-			image: "/images/wed1.jpg",
+			image: "/images/wed1.JPG",
 			description:
 				"An elegant evening celebrating community and raising funds for charity.",
 			highlights: [
