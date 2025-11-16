@@ -27,7 +27,7 @@ function Footer() {
     {
       title: "Our Services",
       links: [
-        { label: "Pricing", href: "/pricing" },
+        { label: "About", href: "/about us" },
         { label: "Contact", href: "/contact" },
         {
           label: "Event Management",
@@ -47,8 +47,8 @@ function Footer() {
     },
     {
       icon: <Phone size={18} className="text-[#d3803c] dark:text-[#e09043]" />,
-      text: "+971 123 456 789",
-      href: "tel:+971123456789",
+      text: "+971522946276",
+      href: "tel:+971522946276",
     },
     {
       icon: <MapPin size={18} className="text-[#d3803c] dark:text-[#e09043]" />,

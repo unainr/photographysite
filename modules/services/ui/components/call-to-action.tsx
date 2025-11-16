@@ -46,11 +46,11 @@ export const CallToAction = () => {
 							</Button>
                                     </Link>
                             <Link href={'/pricing'}>
-							<Button
+							{/* <Button
 								size={"lg"}
 								className="py-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 ">
 								View Pricing
-							</Button>
+							</Button> */}
                                     </Link>
 						</div>
 

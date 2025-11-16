@@ -10,13 +10,12 @@ export const ServicesView = () => {
 	return (
 		<>
 			<ServicesBanner title="Services" linkText="services" />
-			<WhyChooseSection/>
-			  <Services/>
-			  <OurProcess/>
-			  <StateSection/>
-			  	<Testimonials/>
-			  
-			<CallToAction/>
+			<WhyChooseSection image="/images/slider4.jpg" badge={true} />
+			<Services />
+			<OurProcess />
+			<StateSection />
+			<Testimonials />
+			<CallToAction />
 		</>
 	);
 };

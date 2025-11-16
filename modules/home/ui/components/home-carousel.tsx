@@ -21,7 +21,7 @@ export function HomeCarousel() {
 	const slides = [
 		{
 			image: "/images/slider1.jpg",
-			title: "Capture Dubai's Magic Through Our Lens",
+			title: "Dubifotographer Precision in Every Frame",
 			description:
 				"Professional photography services for weddings, corporate events, and special moments across Dubai and UAE.",
 		},
@@ -59,7 +59,7 @@ export function HomeCarousel() {
 							/>
 							{/* Overlay for text - adapts to theme */}
 							<div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent dark:from-black/80 dark:via-black/60 flex flex-col items-start justify-center text-left p-4 sm:p-8 lg:p-12">
-								<h1 className="text-white text-2xl sm:text-4xl lg:text-5xl font-bold drop-shadow-2xl leading-tight">
+								<h1 className="text-white text-2xl sm:text-4xl lg:text-5xl font-bold drop-shadow-2xl leading-tight max-w-4xl wrap-break-word">
 									{slide.title}
 								</h1>
 								<p className="text-white/95 dark:text-white text-base sm:text-lg lg:text-xl mt-2 sm:mt-4 max-w-lg drop-shadow-lg">
@@ -69,9 +69,7 @@ export function HomeCarousel() {
 									<Button
 										size={"lg"}
 										className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">
-										<span className="relative z-10">
-											Book Our Services
-										</span>
+										<span className="relative z-10">Book Our Services</span>
 									</Button>
 								</Link>
 							</div>

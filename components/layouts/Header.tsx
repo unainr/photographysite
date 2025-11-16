@@ -40,6 +40,15 @@ export default function MainHeader() {
 						)}>
 						Home
 					</Link>
+					<Link
+						href="/about"
+						className={cn(
+							"text-sm font-medium transition-colors ",
+							isActive("/about") &&
+								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+						)}>
+						About
+					</Link>
 
 					<Link
 						href="/services"
@@ -67,15 +76,6 @@ export default function MainHeader() {
 								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
 						)}>
 						Event
-					</Link>
-					<Link
-						href="/pricing"
-						className={cn(
-							"text-sm font-medium transition-colors ",
-							isActive("/pricing") &&
-								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-						)}>
-						Pricing
 					</Link>
 				</nav>
 
@@ -108,6 +108,15 @@ export default function MainHeader() {
 									Home
 								</Link>
 								<Link
+									href="/about"
+									className={cn(
+										"text-sm font-medium transition-colors ",
+										isActive("/about") &&
+											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
+									)}>
+									About
+								</Link>
+								<Link
 									href="/services"
 									className={cn(
 										"text-sm font-medium transition-colors ",
@@ -134,15 +143,7 @@ export default function MainHeader() {
 									)}>
 									Event
 								</Link>
-								<Link
-									href="/pricing"
-									className={cn(
-										"text-sm font-medium transition-colors ",
-										isActive("/pricing") &&
-											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-									)}>
-									Pricing
-								</Link>
+
 								<ThemeToggleButton showLabel />
 								<Link href={"/contact"}>
 									<Button className="my-4 sm:my-6 bg-[#d3803c] hover:bg-[#be6b27] dark:bg-[#e09043] dark:hover:bg-[#d3803c] text-white font-semibold shadow-xl transition-all duration-300 ">

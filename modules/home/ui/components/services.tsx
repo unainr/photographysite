@@ -18,6 +18,7 @@ export default function Services() {
       description:
         'Create timeless memories of your special day with stunning photography that captures every emotion and milestone.',
       features: ['Pre-wedding shoots', 'Full day coverage', 'Cinematic videos', 'Premium albums'],
+      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop',
     },
     {
       icon: PartyPopper,
@@ -25,6 +26,7 @@ export default function Services() {
       description:
         'Complete event planning and execution from concept to completion. We handle every detail with precision.',
       features: ['Venue selection', 'Vendor coordination', 'Theme design', 'On-site management'],
+      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop',
     },
     {
       icon: Briefcase,
@@ -32,6 +34,7 @@ export default function Services() {
       description:
         'Professional coverage for conferences, product launches, and corporate gatherings across Dubai and UAE.',
       features: ['Conference coverage', 'Product launches', 'Team events', 'Brand documentation'],
+      image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop',
     },
     {
       icon: Building2,
@@ -39,13 +42,15 @@ export default function Services() {
       description:
         'Stunning property photography that showcases spaces beautifully and helps properties sell faster.',
       features: ['HDR photography', 'Virtual tours', 'Drone shots', 'Twilight photography'],
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop',
     },
-    {
-      icon: Baby,
-      title: 'Family & Newborn',
+     {
+      icon: Camera,
+      title: 'Portrait Photography',
       description:
-        'Precious moments with loved ones captured in warm, natural photography that lasts for generations.',
-      features: ['Newborn sessions', 'Family portraits', 'Maternity shoots', 'Milestone photos'],
+        'Professional portrait sessions that capture your personality and create stunning images for any purpose.',
+      features: ['Studio portraits', 'Outdoor sessions', 'Professional headshots', 'Creative concepts'],
+      image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=300&fit=crop',
     },
     {
       icon: GraduationCap,
@@ -53,6 +58,7 @@ export default function Services() {
       description:
         'Celebrate life\'s milestones with professional photography for birthdays, graduations, and anniversaries.',
       features: ['Birthday parties', 'Graduations', 'Anniversaries', 'Cultural events'],
+      image: 'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop',
     },
     {
       icon: Palette,
@@ -60,6 +66,7 @@ export default function Services() {
       description:
         'Build your professional portfolio with striking fashion photography for models and professionals.',
       features: ['Studio sessions', 'Outdoor shoots', 'Concept creation', 'Retouching'],
+      image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop',
     },
     {
       icon: Camera,
@@ -67,6 +74,7 @@ export default function Services() {
       description:
         'Cinematic storytelling through professional video production for weddings, events, and promotional content.',
       features: ['Wedding films', 'Event highlights', 'Promotional videos', '4K drone footage'],
+      image: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&h=300&fit=crop',
     },
   ];
 
@@ -88,14 +96,22 @@ export default function Services() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-2xl hover:border-[#d3803c]/50 dark:hover:border-[#e09043]/50 transition-all duration-300 border h-full flex flex-col cursor-pointer"
+              className="group hover:shadow-2xl hover:border-[#d3803c]/50 dark:hover:border-[#e09043]/50 transition-all duration-300 border h-full flex flex-col cursor-pointer overflow-hidden"
             >
-              <CardContent className="p-6 flex flex-col h-full">
-                {/* Icon */}
-                <div className="mb-5 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[#d3803c]/10 dark:bg-[#e09043]/10 group-hover:bg-[#d3803c]/20 dark:group-hover:bg-[#e09043]/20 transition-colors duration-300">
+              {/* Image Section */}
+              <div className="relative w-full h-40 overflow-hidden">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-background via-background/50 to-transparent" />
+                <div className="absolute bottom-3 left-3 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-background/90 backdrop-blur-sm border border-[#d3803c]/20 dark:border-[#e09043]/20 group-hover:bg-[#d3803c]/20 dark:group-hover:bg-[#e09043]/20 transition-all duration-300">
                   <service.icon className="w-6 h-6 text-[#d3803c] dark:text-[#e09043] group-hover:scale-110 transition-transform duration-300" />
                 </div>
+              </div>
 
+              <CardContent className="p-6 flex flex-col grow">
                 {/* Title */}
                 <h3 className="text-xl font-semibold mb-3 group-hover:text-[#d3803c] dark:group-hover:text-[#e09043] transition-colors duration-300">
                   {service.title}
