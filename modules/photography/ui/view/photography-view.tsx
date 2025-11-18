@@ -1,6 +1,6 @@
 import ServicesBanner from "@/modules/services/ui/components/services-banner"
 import { Metadata } from 'next';
-import { Gallery } from "../components/gallery";
+import { LayoutGallery } from "../components/layougaller";
 
 export const metadata: Metadata = {
   title: 'Photography Gallery | Professional Photography Portfolio Dubai',
@@ -52,7 +52,7 @@ export const PhotographyView = () => {
   return (
     <>
     <ServicesBanner title="Photography" linkText="photography" />
-    <Gallery/>
+    <LayoutGallery/>
     </>
   )
 }

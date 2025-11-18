@@ -151,7 +151,7 @@ function Footer() {
       </div>
 
       {/* Text hover effect */}
-      <div className="lg:flex hidden h-120 -mt-52 -mb-36">
+      <div className="lg:flex hidden h-120 -mt-52 -mb-36 ">
         <TextHoverEffect text="DUBAI" className="z-50" />
       </div>
 

@@ -9,6 +9,7 @@ import {
   GraduationCap,
   Palette,
 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Services() {
   const services = [
@@ -18,7 +19,7 @@ export default function Services() {
       description:
         'Create timeless memories of your special day with stunning photography that captures every emotion and milestone.',
       features: ['Pre-wedding shoots', 'Full day coverage', 'Cinematic videos', 'Premium albums'],
-      image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=300&fit=crop',
+      image: '/images/photo6.jpg',
     },
     {
       icon: PartyPopper,
@@ -42,7 +43,7 @@ export default function Services() {
       description:
         'Stunning property photography that showcases spaces beautifully and helps properties sell faster.',
       features: ['HDR photography', 'Virtual tours', 'Drone shots', 'Twilight photography'],
-      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop',
+      image: '/images/photo35.jpg',
     },
      {
       icon: Camera,
@@ -50,7 +51,7 @@ export default function Services() {
       description:
         'Professional portrait sessions that capture your personality and create stunning images for any purpose.',
       features: ['Studio portraits', 'Outdoor sessions', 'Professional headshots', 'Creative concepts'],
-      image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=400&h=300&fit=crop',
+      image: '/images/photo10.jpg',
     },
     {
       icon: GraduationCap,
@@ -66,7 +67,7 @@ export default function Services() {
       description:
         'Build your professional portfolio with striking fashion photography for models and professionals.',
       features: ['Studio sessions', 'Outdoor shoots', 'Concept creation', 'Retouching'],
-      image: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop',
+      image: '/images/photo39.jpg',
     },
     {
       icon: Camera,
@@ -94,13 +95,15 @@ export default function Services() {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
-            <Card
+            <div
               key={index}
               className="group hover:shadow-2xl hover:border-[#d3803c]/50 dark:hover:border-[#e09043]/50 transition-all duration-300 border h-full flex flex-col cursor-pointer overflow-hidden"
             >
               {/* Image Section */}
-              <div className="relative w-full h-40 overflow-hidden">
-                <img 
+              <div className="relative w-full h-56 overflow-hidden">
+                <Image
+                width={900}
+                height={900} 
                   src={service.image} 
                   alt={service.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -132,7 +135,7 @@ export default function Services() {
                   ))}
                 </ul>
               </CardContent>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

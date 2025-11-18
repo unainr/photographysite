@@ -13,7 +13,7 @@ export default function Portfolio() {
     {
       category: 'Weddings',
       title: 'Luxury Wedding at Burj Al Arab',
-      image: '/images/image1.JPG',
+      image: '/images/photo5.jpg',
       description: 'Elegant celebration',
       alt: 'Luxury wedding photography at Burj Al Arab Dubai',
     },
@@ -27,7 +27,7 @@ export default function Portfolio() {
     {
       category: 'Events',
       title: 'Dubai Fashion Week',
-      image: '/images/image3.JPG',
+      image: '/images/photo12.jpg',
       description: 'High-end fashion event',
       alt: 'Dubai Fashion Week event photography coverage',
     },
@@ -41,7 +41,7 @@ export default function Portfolio() {
     {
       category: 'Real Estate',
       title: 'Palm Jumeirah Villa',
-      image: '/images/image44.jpg',
+      image: '/images/photo35.jpg',
       description: 'Luxury property',
       alt: 'Luxury villa photography Palm Jumeirah Dubai',
     },
@@ -69,7 +69,7 @@ export default function Portfolio() {
     {
       category: 'Portraits',
       title: 'Fashion Portfolio Shoot',
-      image: '/images/image13.jpg',
+      image: '/images/photo41.jpg',
       description: 'Model portfolio',
       alt: 'Fashion portfolio photography Dubai model shoot',
     },
