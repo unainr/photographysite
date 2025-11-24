@@ -5,12 +5,14 @@ import Portfolio from "./components/portfolio";
 import Process from "./components/process";
 import Services from "./components/services";
 import Testimonials from "./components/testimonials";
+import Categories from "./components/categories";
 
 export const HomeView = () => {
 	return (
 		<>
 			<HomeCarousel />
 			<Services />
+			<Categories />
 			<Process /> 
 			<Portfolio />
 			<div className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-12 md:py-20">
@@ -36,3 +38,4 @@ export const HomeView = () => {
 		</>
 	);
 };
+

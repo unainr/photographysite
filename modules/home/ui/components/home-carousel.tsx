@@ -3,6 +3,8 @@ import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 
+import Fade from "embla-carousel-fade";
+
 import {
 	Carousel,
 	CarouselContent,
@@ -41,14 +43,14 @@ export function HomeCarousel() {
 
 	return (
 		<Carousel
-			plugins={[plugin.current]}
+			plugins={[plugin.current, Fade()]}
 			className="w-full"
 			onMouseEnter={plugin.current.stop}
 			onMouseLeave={plugin.current.reset}>
 			<CarouselContent>
 				{slides.map((slide, index) => (
 					<CarouselItem key={index}>
-						<div className="relative w-full h-[400px] sm:h-[600px] lg:h-[550px]">
+						<div className="relative w-full h-[400px] sm:h-[600px] lg:h-[650px]">
 							<Image
 								src={slide.image}
 								alt={`${slide.title} - Dubai Fotographer`}

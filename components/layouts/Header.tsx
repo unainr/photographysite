@@ -3,7 +3,8 @@
 import * as React from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu, Phone } from "lucide-react";
+import { Menu, Phone, ChevronDown } from "lucide-react";
+import { photographyCategories } from "@/data/photography-categories";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Logo from "./Logo";
 import { usePathname } from "next/navigation";
@@ -59,6 +60,27 @@ export default function MainHeader() {
 						)}>
 						Services
 					</Link>
+					<div className="relative group">
+						<button
+							className={cn(
+								"flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#ffbc5f]",
+								pathname.startsWith("/photography/") && "text-[#ffbc5f]"
+							)}>
+							Categories <ChevronDown className="w-4 h-4" />
+						</button>
+						<div className="absolute top-full left-0 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+							<div className="bg-background border rounded-md shadow-lg overflow-hidden p-2 flex flex-col gap-1">
+								{photographyCategories.map((category) => (
+									<Link
+										key={category.id}
+										href={`/photography/${category.slug}`}
+										className="block px-4 py-2 text-sm hover:bg-muted rounded-sm transition-colors">
+										{category.name}
+									</Link>
+								))}
+							</div>
+						</div>
+					</div>
 					<Link
 						href="/photography"
 						className={cn(
@@ -68,15 +90,7 @@ export default function MainHeader() {
 						)}>
 						Photography
 					</Link>
-					<Link
-						href="/event"
-						className={cn(
-							"text-sm font-medium transition-colors ",
-							isActive("/event") &&
-								"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-						)}>
-						Event
-					</Link>
+					
 				</nav>
 
 				<div className="hidden md:flex items-center gap-2">
@@ -125,6 +139,20 @@ export default function MainHeader() {
 									)}>
 									Services
 								</Link>
+								<div className="flex flex-col gap-2 w-full items-center">
+									<div className="text-sm font-medium text-muted-foreground">Categories</div>
+									{photographyCategories.map((category) => (
+										<Link
+											key={category.id}
+											href={`/photography/${category.slug}`}
+											className={cn(
+												"text-sm transition-colors hover:text-[#ffbc5f]",
+												isActive(`/photography/${category.slug}`) && "text-[#ffbc5f]"
+											)}>
+											{category.name}
+										</Link>
+									))}
+								</div>
 								<Link
 									href="/photography"
 									className={cn(
@@ -134,15 +162,7 @@ export default function MainHeader() {
 									)}>
 									Photography
 								</Link>
-								<Link
-									href="/event"
-									className={cn(
-										"text-sm font-medium transition-colors ",
-										isActive("/event") &&
-											"text-[#ffbc5f] hover:text-[#ffbc5f] transition-all duration-100 ease-in font-semibold underline underline-offset-4"
-									)}>
-									Event
-								</Link>
+								
 
 								<ThemeToggleButton showLabel />
 								<Link href={"/contact"}>
