@@ -143,7 +143,7 @@ function Footer() {
 						</div>
 					</div>
 
-					<hr className="border-t border-border my-7" />
+					<hr className="border-t border-border my-8" />
 
 					{/* Bottom Section with Social Links */}
 					<div className="flex flex-col md:flex-row items-center justify-between gap-6">
