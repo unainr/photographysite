@@ -68,7 +68,7 @@ function Footer() {
 			label: "Instagram",
 			href: "https://www.instagram.com/dubaifotographer?igsh=cnk2dWd0YWpqYmph&utm_source=qr",
 		},
-		{ icon: <Twitter size={20} />, label: "Twitter", href: "#" },
+		
 		{
 			icon: <Linkedin size={20} />,
 			label: "LinkedIn",
