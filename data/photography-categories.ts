@@ -24,7 +24,7 @@ export const photographyCategories: PhotoCategory[] = [
 		photos: [
 			{
 				id: 1,
-				url: "/images/image1.jpg",
+				url: "/images/image1.JPG",
 				title: "Wedding Ceremony",
 				desc: "Elegant wedding moments",
 			},
@@ -36,7 +36,7 @@ export const photographyCategories: PhotoCategory[] = [
 			},
 			{
 				id: 3,
-				url: "/images/image2.jpg",
+				url: "/images/image2.JPG",
 				title: "Wedding Celebration",
 				desc: "Joyful moments",
 			},
