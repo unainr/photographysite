@@ -22,22 +22,16 @@ export function HomeCarousel() {
 
 	const slides = [
 		{
-			image: "/images/slider1.jpg",
+			image: "/dubai/cover1.jpg",
 			title: "Dubifotographer Precision in Every Frame",
 			description:
 				"Professional photography services for weddings, corporate events, and special moments across Dubai and UAE.",
 		},
 		{
-			image: "/images/slider3.jpg",
-			title: "Complete Event Management & Photography Solutions",
+			image: "/dubai/cover2.jpg",
+			title: "Complete Event photography  & Photography Solutions",
 			description:
 				"From intimate gatherings to grand celebrations — we plan, capture, and create unforgettable memories.",
-		},
-		{
-			image: "/images/slider2.jpg",
-			title: "Where Moments Become Timeless Memories",
-			description:
-				"Award-winning photographers specializing in destination weddings, corporate events, and portrait photography in Dubai.",
 		},
 	];
 
@@ -50,20 +44,20 @@ export function HomeCarousel() {
 			<CarouselContent>
 				{slides.map((slide, index) => (
 					<CarouselItem key={index}>
-						<div className="relative w-full h-[400px] sm:h-[600px] lg:h-[650px]">
+						<div className="relative w-full ">
 							<Image
 								src={slide.image}
 								alt={`${slide.title} - Dubai Fotographer`}
 								className="w-full h-full object-cover"
 								width={900}
-								height={200}
+								height={900}
 								priority={index === 0}
 							/>
 							{/* Overlay for text - adapts to theme */}
 							<div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-transparent dark:from-black/80 dark:via-black/60 flex flex-col items-start justify-center text-left p-4 sm:p-8 lg:p-12">
-								<h1 className="text-white text-2xl sm:text-4xl lg:text-5xl font-bold drop-shadow-2xl leading-tight max-w-4xl wrap-break-word">
+								<p className="text-white/95 dark:text-white text-base sm:text-lg lg:text-3xl  mt-2 sm:mt-4 max-w-lg drop-shadow-lg">
 									{slide.title}
-								</h1>
+								</p>
 								<p className="text-white/95 dark:text-white text-base sm:text-lg lg:text-xl mt-2 sm:mt-4 max-w-lg drop-shadow-lg">
 									{slide.description}
 								</p>

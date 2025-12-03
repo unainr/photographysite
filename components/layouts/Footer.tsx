@@ -30,7 +30,7 @@ function Footer() {
 				{ label: "About", href: "/about us" },
 				{ label: "Contact", href: "/contact" },
 				{
-					label: "Event Management",
+					label: "Event photography ",
 					href: "/event",
 				},
 			],
@@ -85,14 +85,14 @@ function Footer() {
 		<>
 			<footer className="bg-muted/30 border-t border-border">
 				<div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
-					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12">
 						{/* Brand section */}
 						<div className="flex flex-col w-full">
-							<div className="flex items-center space-x-2 mb-4">
+							<div className="flex items-center space-x-2 mb-4 -mt-2">
 								<Logo />
 							</div>
 							<p className="text-sm leading-relaxed text-muted-foreground">
-								Professional photography and event management services across
+								Professional photography and Event photography  services across
 								Dubai and UAE. Capturing your precious moments with excellence.
 							</p>
 						</div>
@@ -122,7 +122,7 @@ function Footer() {
 							<h4 className="text-foreground text-lg font-semibold mb-6">
 								Contact Us
 							</h4>
-							<ul className="space-y-4">
+							<ul className="space-y-3">
 								{contactInfo.map((item, i) => (
 									<li key={i} className="flex items-center space-x-3">
 										{item.icon}
@@ -154,7 +154,7 @@ function Footer() {
 						<div className="flex items-center space-x-3">
 							{socialLinks.map((social) => (
 								<a
-                target="_blank"
+									target="_blank"
 									key={social.label}
 									href={social.href}
 									aria-label={social.label}

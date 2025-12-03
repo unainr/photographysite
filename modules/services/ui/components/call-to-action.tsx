@@ -58,7 +58,7 @@ export const CallToAction = () => {
 						<div className="mt-6 md:mt-8 flex flex-wrap items-center justify-center gap-4 md:gap-6 text-neutral-400 text-xs md:text-sm">
 							<div className="flex items-center gap-2">
 								<div className="w-2 h-2 rounded-full bg-[#e09043]" />
-								<span>500+ Happy Clients</span>
+								<span>2500+ Happy Clients</span>
 							</div>
 							<div className="flex items-center gap-2">
 								<div className="w-2 h-2 rounded-full bg-[#e09043]" />

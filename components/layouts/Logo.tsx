@@ -5,7 +5,7 @@ const Logo = () => {
 		<Link href="/" className="flex items-center justify-center gap-2">
 			  <Image
 				src="/logo.png" 
-				alt="Book Loom Logo"
+				alt="Photography Logo"
 				width={108}
 				height={50}
 				priority

@@ -109,7 +109,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Benefits Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {[
             {
               title: 'Quality Guaranteed',
@@ -121,11 +121,7 @@ export default function ProcessSection() {
               description: 'Receive your edited photos and videos within 2-4 weeks. Same-day highlights available.',
               icon: '⚡',
             },
-            {
-              title: 'Lifetime Access',
-              description: 'Cloud backup and lifetime access to your digital files. Your memories are always safe.',
-              icon: '☁️',
-            },
+            
           ].map((item, idx) => (
             <div
               key={idx}

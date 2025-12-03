@@ -2,17 +2,17 @@ import { ServicesView } from "@/modules/services/ui/views/services-view";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Photography & Event Management Services | Dubai Photographer",
+	title: "Photography & Event photography  Services | Dubai Photographer",
 	description:
-		"Comprehensive photography and event management services in Dubai and UAE. Wedding photography, corporate events, real estate photography, video production, and more. Professional solutions by Dubai Photographer.",
+		"Comprehensive photography and Event photography  services in Dubai and UAE. Wedding photography, corporate events, real estate photography, video production, and more. Professional solutions by Dubai Photographer.",
 	keywords:
-		"photography services Dubai, event management, wedding photography, corporate events, real estate photography, video production, Dubai services, UAE photography, professional photographer Dubai",
+		"photography services Dubai, Event photography , wedding photography, corporate events, real estate photography, video production, Dubai services, UAE photography, professional photographer Dubai",
 	authors: [{ name: "Dubai Photographer" }],
 	creator: "Dubai Photographer",
 	openGraph: {
-		title: "Photography & Event Management Services | Dubai Photographer",
+		title: "Photography & Event photography  Services | Dubai Photographer",
 		description:
-			"Comprehensive photography and event management services in Dubai and UAE. Wedding photography, corporate events, real estate photography, video production, and more.",
+			"Comprehensive photography and Event photography  services in Dubai and UAE. Wedding photography, corporate events, real estate photography, video production, and more.",
 		type: "website",
 		url: "https://dubaifotographer.com/services",
 		siteName: "Dubai Photographer",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Photography & Event Management Services | Dubai Photographer",
+		title: "Photography & Event photography  Services | Dubai Photographer",
 		description:
-			"Comprehensive photography and event management services in Dubai and UAE.",
+			"Comprehensive photography and Event photography  services in Dubai and UAE.",
 		creator: "@dubaiphotographer",
 		images: [
 			"https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop&q=60",

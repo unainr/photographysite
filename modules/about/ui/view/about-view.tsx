@@ -21,7 +21,7 @@ export const AboutView = () => {
 						</h2>
 						<p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
 							We collaborate with industry leaders to deliver exceptional
-							photography and event management services across Dubai and UAE.
+							photography and Event photography  services across Dubai and UAE.
 						</p>
 					</div>
 
@@ -30,7 +30,7 @@ export const AboutView = () => {
 			</div>
 			<Testimonials />
 			<CallToAction />
-            <FAQ/>
+			<FAQ />
 		</>
 	);
 };

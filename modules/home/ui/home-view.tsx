@@ -13,7 +13,7 @@ export const HomeView = () => {
 			<HomeCarousel />
 			<Services />
 			<Categories />
-			<Process /> 
+			<Process />
 			<Portfolio />
 			<div className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 py-12 md:py-20">
 				<section className="relative w-full max-w-5xl">
@@ -26,7 +26,7 @@ export const HomeView = () => {
 						</h2>
 						<p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
 							We collaborate with industry leaders to deliver exceptional
-							photography and event management services across Dubai and UAE.
+							photography and Event photography  services across Dubai and UAE.
 						</p>
 					</div>
 
@@ -38,4 +38,3 @@ export const HomeView = () => {
 		</>
 	);
 };
-
