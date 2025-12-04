@@ -44,7 +44,7 @@ export function HomeCarousel() {
 			<CarouselContent>
 				{slides.map((slide, index) => (
 					<CarouselItem key={index}>
-						<div className="relative w-full ">
+						<div className="relative w-full h-400 ">
 							<Image
 								src={slide.image}
 								alt={`${slide.title} - Dubai Fotographer`}

@@ -326,9 +326,9 @@ export const photographyCategories: PhotoCategory[] = [
 		],
 	},
 	{
-		id: "interior",
-		name: "Interior Photography",
-		slug: "interior",
+		id: "real-estate",
+		name: "Real Estate",
+		slug: "real-estate",
 		description: "Architecture and interior design photography",
 		coverImage: "/images/categories/interior/int1.jpg",
 		photos: [

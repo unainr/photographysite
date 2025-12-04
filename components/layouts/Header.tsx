@@ -13,6 +13,8 @@ import { ThemeToggleButton } from "../mode-toggle";
 
 export default function MainHeader() {
 	const [isScrolled, setIsScrolled] = React.useState(false);
+	const [isCategoryOpen, setIsCategoryOpen] = React.useState(false);
+	const [isMobileCategoryOpen, setIsMobileCategoryOpen] = React.useState(false);
 	const pathname = usePathname();
 	const isActive = (path: string) => pathname === path;
 	React.useEffect(() => {
@@ -62,24 +64,35 @@ export default function MainHeader() {
 					</Link>
 					<div className="relative group">
 						<button
+							onClick={() => setIsCategoryOpen(!isCategoryOpen)}
 							className={cn(
 								"flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#ffbc5f]",
-								pathname.startsWith("/photography/") && "text-[#ffbc5f]"
+								(pathname.startsWith("/photography/") || isCategoryOpen) &&
+									"text-[#ffbc5f]"
 							)}>
-							Categories <ChevronDown className="w-4 h-4" />
+							Categories{" "}
+							<ChevronDown
+								className={cn(
+									"w-4 h-4 transition-transform duration-200",
+									isCategoryOpen && "rotate-180"
+								)}
+							/>
 						</button>
-						<div className="absolute top-full left-0 w-56 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-							<div className="bg-background border rounded-md shadow-lg overflow-hidden p-2 flex flex-col gap-1">
-								{photographyCategories.map((category) => (
-									<Link
-										key={category.id}
-										href={`/photography/${category.slug}`}
-										className="block px-4 py-2 text-sm hover:bg-muted rounded-sm transition-colors">
-										{category.name}
-									</Link>
-								))}
+						{isCategoryOpen && (
+							<div className="absolute top-full left-0 w-56 pt-2 animate-in fade-in slide-in-from-top-1 duration-200">
+								<div className="bg-background border rounded-md shadow-lg overflow-hidden p-2 flex flex-col gap-1">
+									{photographyCategories.map((category) => (
+										<Link
+											key={category.id}
+											href={`/photography/${category.slug}`}
+											onClick={() => setIsCategoryOpen(false)}
+											className="block px-4 py-2 text-sm hover:bg-muted rounded-sm transition-colors">
+											{category.name}
+										</Link>
+									))}
+								</div>
 							</div>
-						</div>
+						)}
 					</div>
 					<Link
 						href="/photography"
@@ -90,7 +103,6 @@ export default function MainHeader() {
 						)}>
 						Photography
 					</Link>
-					
 				</nav>
 
 				<div className="hidden md:flex items-center gap-2">
@@ -140,18 +152,36 @@ export default function MainHeader() {
 									Services
 								</Link>
 								<div className="flex flex-col gap-2 w-full items-center">
-									<div className="text-sm font-medium text-muted-foreground">Categories</div>
-									{photographyCategories.map((category) => (
-										<Link
-											key={category.id}
-											href={`/photography/${category.slug}`}
+									<button
+										onClick={() =>
+											setIsMobileCategoryOpen(!isMobileCategoryOpen)
+										}
+										className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+										Categories{" "}
+										<ChevronDown
 											className={cn(
-												"text-sm transition-colors hover:text-[#ffbc5f]",
-												isActive(`/photography/${category.slug}`) && "text-[#ffbc5f]"
-											)}>
-											{category.name}
-										</Link>
-									))}
+												"w-4 h-4 transition-transform duration-200",
+												isMobileCategoryOpen && "rotate-180"
+											)}
+										/>
+									</button>
+
+									{isMobileCategoryOpen && (
+										<div className="flex flex-col gap-2 w-full items-center animate-in slide-in-from-top-2 fade-in duration-200">
+											{photographyCategories.map((category) => (
+												<Link
+													key={category.id}
+													href={`/photography/${category.slug}`}
+													className={cn(
+														"text-sm transition-colors hover:text-[#ffbc5f]",
+														isActive(`/photography/${category.slug}`) &&
+															"text-[#ffbc5f]"
+													)}>
+													{category.name}
+												</Link>
+											))}
+										</div>
+									)}
 								</div>
 								<Link
 									href="/photography"
@@ -162,7 +192,6 @@ export default function MainHeader() {
 									)}>
 									Photography
 								</Link>
-								
 
 								<ThemeToggleButton showLabel />
 								<Link href={"/contact"}>
