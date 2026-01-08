@@ -4,7 +4,7 @@ import { HomeView } from "@/modules/home/ui/home-view"
 const Home = () => {
   return (
     <>
-     <div className="w-full">
+     <div className="w-full ">
         <NotFoundPage/>
         </div>
     {/* <HomeView/> */}
