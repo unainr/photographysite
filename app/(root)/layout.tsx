@@ -6,9 +6,9 @@ export interface LayoutProps {
 }
 const Layout = ({ children }: LayoutProps) => {
 	return <>
-	<MainHeader/>
+	{/* <MainHeader/> */}
 	{children}
-	<Footer/>
+	{/* <Footer/> */}
 	</>;
 };
 
